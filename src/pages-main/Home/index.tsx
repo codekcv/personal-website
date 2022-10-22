@@ -3,6 +3,7 @@ import Head from "next/head";
 import Hero from "./Hero";
 import Blogs from "./Blogs";
 import Stack from "./Stack";
+// import Projects from "./Project";
 
 const Home: NextPage = () => {
   return (
@@ -15,11 +16,17 @@ const Home: NextPage = () => {
 
       <section className="max-w-3xl mx-auto">
         <Hero />
-        <div>
-          <h1 className="text-center mt-8">Work in Progress ! ! !</h1>
+
+        <div className="px-4">
+          <div>
+            <h1 className="text-center mt-4">
+              My personal slice of the internet.
+            </h1>
+          </div>
+          <Blogs />
+          <Stack />
+          {/* <Projects /> */}
         </div>
-        <Blogs />
-        <Stack />
       </section>
 
       <footer />
