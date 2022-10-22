@@ -15,6 +15,9 @@ const Home: NextPage = () => {
 
       <section className="max-w-3xl mx-auto">
         <Hero />
+        <div>
+          <h1 className="text-center mt-8">Work in Progress ! ! !</h1>
+        </div>
         <Blogs />
         <Stack />
       </section>
