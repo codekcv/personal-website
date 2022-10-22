@@ -36,7 +36,7 @@ const Navbar: FC = () => {
   };
 
   return (
-    <nav className="fixed bottom-0 h-14 bg-white w-screen flex justify-evenly items-center shadow-inner">
+    <nav className="fixed bottom-0 h-14 bg-white w-screen flex justify-evenly items-center shadow-inner md:top-0">
       <ul className="flex justify-evenly items-center flex-grow">
         {menus.map((menu) => (
           <li className="w-full pt-2" key={menu.name}>
