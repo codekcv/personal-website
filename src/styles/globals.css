@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl font-medium text-zinc-900 font-amatic;
+  }
+
+  h2 {
+    @apply text-lg text-zinc-900;
+  }
+}
+
+* {
+  transition: all ease 0.35s;
+}

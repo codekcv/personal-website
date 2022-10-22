@@ -12,11 +12,12 @@ const Hero: FC = () => {
           layout="fill"
           objectFit="cover"
           alt="Christian Villamin's Photo"
+          priority
         />
       </div>
 
       <div>
-        <h1 className="mt-12 text-2xl font-bold md:text-4xl">
+        <h1 className="mt-12 text-4xl font-bold md:text-4xl">
           Christian Villamin
         </h1>
 

@@ -6,7 +6,11 @@ module.exports = {
     "./src/components/**/*.tsx",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        amatic: "Amatic SC",
+      },
+    },
   },
   plugins: [],
 };
