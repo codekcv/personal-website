@@ -36,14 +36,14 @@ const Navbar: FC = () => {
   };
 
   return (
-    <nav className="fixed bottom-0 h-16 bg-slate-50 w-screen flex justify-evenly items-center">
+    <nav className="fixed bottom-0 h-14 bg-white w-screen flex justify-evenly items-center shadow-inner">
       <ul className="flex justify-evenly items-center flex-grow">
         {menus.map((menu) => (
-          <li key={menu.name}>
+          <li className="w-full pt-2" key={menu.name}>
             <Link href={menu.link}>
               <div className={`${menuStyle} ${isActiveRoute(menu.link)}`}>
-                <menu.Icon className="text-2xl" />
-                <h4>{menu.name}</h4>
+                <menu.Icon className="text-xl" />
+                <h4 className="text-sm">{menu.name}</h4>
               </div>
             </Link>
           </li>
