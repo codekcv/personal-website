@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Hero from "./Hero";
+import Blogs from "./Blogs";
+import Stack from "./Stack";
 
 const Home: NextPage = () => {
   return (
@@ -11,8 +13,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section>
+      <section className="max-w-3xl mx-auto">
         <Hero />
+        <Blogs />
+        <Stack />
       </section>
 
       <footer />
