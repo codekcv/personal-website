@@ -52,9 +52,10 @@ const Hero: FC = () => {
     <div className="text-center px-6 mt-6 flex items-center max-w-xl mx-auto">
       <div className="relative w-40 h-40 rounded-full overflow-hidden bg-gradient-to-r from-slate-500">
         <Image
-          className="scale-125"
+          className="scale-125 object-cover"
           src={ProfilePicture}
           alt="Christian Villamin's Photo"
+          fill
         />
       </div>
 
