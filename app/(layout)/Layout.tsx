@@ -1,6 +1,6 @@
 import { FC } from "react";
-import Footer from "./Footer";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 type Props = {
   children: React.ReactNode;

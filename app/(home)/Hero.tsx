@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FC } from "react";
 import ProfilePicture from "@public/images/christian_villamin.png";
+import { Amatic_SC } from "@next/font/google";
 
 import {
   SiGithub,
@@ -40,8 +41,6 @@ const socials = [
   },
 ];
 
-import { Amatic_SC } from "@next/font/google";
-
 const amatic_sc = Amatic_SC({
   weight: "400",
   subsets: ["latin"],
@@ -60,7 +59,7 @@ const Hero: FC = () => {
       </div>
 
       <div className="px-4">
-        <h1 className="text-4xl font-bold md:text-4xl" style={amatic_sc.style}>
+        <h1 className={`${amatic_sc.className} text-4xl font-bold md:text-4xl`}>
           Christian Villamin
         </h1>
 

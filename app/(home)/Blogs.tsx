@@ -1,5 +1,5 @@
-import BlogPreview from "@/components/BlogPreview";
-import SectionTitle from "@/components/SectionTitle";
+import BlogPreview from "components/BlogPreview";
+import SectionTitle from "components/SectionTitle";
 
 export const Blogs = () => {
   return (
