@@ -1,4 +1,10 @@
 import { FC } from "react";
+import { Amatic_SC } from "@next/font/google";
+
+const amatic_sc = Amatic_SC({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 type Props = {
   children: string;
@@ -6,7 +12,7 @@ type Props = {
 
 const SectionTitle: FC<Props> = ({ children }) => {
   return (
-    <h1 className="text-center ">
+    <h1 className="text-center" style={amatic_sc.style}>
       &#47;&#47; --------- &lt;
       <span className="text-green-700 font-medium">{children}</span> /&gt;
       --------- &#47;&#47;

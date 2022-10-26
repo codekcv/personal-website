@@ -3,6 +3,13 @@ import Blogs from "./Blogs";
 import Stack from "./Stack";
 import Projects from "./Project";
 
+import { Amatic_SC } from "@next/font/google";
+
+const amatic_sc = Amatic_SC({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 const Home = () => {
   return (
     <div>
@@ -17,10 +24,11 @@ const Home = () => {
 
         <div className="px-4">
           <div>
-            <h1 className="text-center mt-4">
+            <h1 className="text-center mt-4" style={amatic_sc.style}>
               My personal slice of the internet.
             </h1>
           </div>
+
           <Blogs />
           <Stack />
           <Projects />

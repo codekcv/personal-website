@@ -40,20 +40,28 @@ const socials = [
   },
 ];
 
+import { Amatic_SC } from "@next/font/google";
+
+const amatic_sc = Amatic_SC({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 const Hero: FC = () => {
   return (
     <div className="text-center px-6 mt-6 flex items-center max-w-xl mx-auto">
       <div className="relative w-40 h-40 rounded-full overflow-hidden bg-gradient-to-r from-slate-500">
         <Image
-          className="scale-125 object-cover"
+          className="scale-125"
           src={ProfilePicture}
-          fill
           alt="Christian Villamin's Photo"
         />
       </div>
 
       <div className="px-4">
-        <h1 className="text-4xl font-bold md:text-4xl">Christian Villamin</h1>
+        <h1 className={`${amatic_sc.className} text-4xl font-bold md:text-4xl`}>
+          Christian Villamin
+        </h1>
 
         <h3 className="text-slate-500 mt-2">
           I specialize on modern web technologies. All things fast.

@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply text-4xl font-medium text-zinc-900 font-amatic;
+    @apply text-4xl font-medium text-zinc-900;
   }
 
   h2 {

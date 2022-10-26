@@ -4,14 +4,10 @@ module.exports = {
     "./src/pages/**/*.tsx",
     "./src/pages-main/**/*.tsx",
     "./src/components/**/*.tsx",
-    "./app/**/*.tsx",
+    "./src/app/**/*.tsx",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        amatic: "Amatic SC",
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };
