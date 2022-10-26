@@ -59,7 +59,7 @@ const Hero: FC = () => {
       </div>
 
       <div className="px-4">
-        <h1 className={`${amatic_sc.className} text-4xl font-bold md:text-4xl`}>
+        <h1 className="text-4xl font-bold md:text-4xl" style={amatic_sc.style}>
           Christian Villamin
         </h1>
 
