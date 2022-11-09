@@ -1,13 +1,6 @@
 import "./global.css";
 import Layout from "./(layout)/Layout";
 
-// const Layout = ({ children }: any) => {
-//   return (
-//     <div className="min-h-screen flex flex-col">
-//       <main className="flex-grow max-w-3xl mx-auto md:pt-12">{children}</main>
-//     </div>
-//   );
-// };
 
 export default function RootLayout({
   children,
