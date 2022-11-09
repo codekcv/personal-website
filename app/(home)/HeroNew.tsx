@@ -52,10 +52,10 @@ const amatic_sc = Amatic_SC({
 
 const HeroNew: FC = () => {
   return (
-    <div className="relative h-[calc(100vh-3.5rem)] text-center flex justify-center items-center">
-      <div className="-translate-y-8">
+    <div className="relative h-[calc(100vh-3.5rem)] text-center flex justify-center items-center md:h-screen">
+      <div className="-translate-y-[90px] md:-translate-y-[90px]">
         <div
-          className="border-8 mx-auto relative w-[180px] h-[180px] rounded-full overflow-hidden"
+          className="mx-auto relative w-[180px] h-[180px] rounded-full overflow-hidden"
           style={{
             transform: "translateY(50%)",
             border: "5px dashed white",
@@ -71,7 +71,7 @@ const HeroNew: FC = () => {
         </div>
 
         <div
-          className="text-center text-white px-4 pb-4"
+          className="text-center text-white px-4 pb-4 md:px-8 md:pb-8"
           style={{
             backgroundColor: "cadetblue",
             borderRadius: 30,
@@ -80,16 +80,18 @@ const HeroNew: FC = () => {
           }}
         >
           {/* <h1 className="text-white text-md">Christian Villamin</h1> */}
-          <Title className="mt-24">Christian Villamin</Title>
+          <Title className="text-[8vw] mt-24 md:text-6xl">
+            Christian Villamin
+          </Title>
           <p
-            className="mt-4 text-justify text-sm bg-[rgba(0,0,0,0.25)] rounded-[8px] px-4 py-2"
+            className="mt-4 text-center text-sm bg-[rgba(0,0,0,0.25)] rounded-[8px] px-4 py-2 md:mt-8 md:text-md"
             style={{ color: "gainsboro" }}
           >
-            I&apos;m a software engineer specializing in the latest, fastest,
-            and greatest web technologies.
+            I&apos;m a software engineer specializing in the latest and greatest
+            web technologies.
           </p>
 
-          <ul className="flex justify-evenly items-center mt-4">
+          <ul className="flex justify-evenly items-center mt-4 md:mt-8">
             {socials.map((social) => (
               <li key={social.name}>
                 <a href={social.href} target="_blank" rel="noopener noreferrer">

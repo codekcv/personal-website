@@ -6,13 +6,8 @@ type Props = {
 export default function Title({ className = "", children }: Props) {
   return (
     <h1
-      className={className}
-      style={{
-        color: "rgb(55, 55, 80)",
-        fontSize: "8vw",
-        textShadow: "0 3px silver",
-        textTransform: "uppercase",
-      }}
+      className={`${className} text-center text-[rgb(55, 55, 80)] uppercase`}
+      style={{ textShadow: "0 3px silver" }}
     >
       {children}
     </h1>

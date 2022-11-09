@@ -1,5 +1,5 @@
 import { Amatic_SC } from "@next/font/google";
-// import About from "./(home)/About";
+import About from "./(home)/About";
 import Blogs from "./(home)/Blogs";
 import Hero from "./(home)/Hero";
 import HeroNew from "./(home)/HeroNew";
@@ -14,16 +14,16 @@ const amatic_sc = Amatic_SC({
 export default function Home() {
   return (
     <div>
-      <section className="max-w-3xl mx-auto md:w-full">
+      <section>
         <HeroNew />
-        {/* <About /> */}
+        <About />
 
         <div className="px-4">
           {/* <h1 className={`${amatic_sc.className} text-center mt-4`}>
             My personal slice of the internet.
           </h1> */}
 
-          <Blogs />
+          {/* <Blogs /> */}
           <Stack />
         </div>
       </section>
