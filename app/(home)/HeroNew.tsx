@@ -78,7 +78,7 @@ const HeroNew: FC = () => {
 
   return (
     <div className="relative h-[calc(100vh-3.5rem)] flex justify-center items-center md:h-[calc(100vh-6rem)]">
-      <div className="-translate-y-8 md:-translate-y-[6rem]">
+      <div className="-translate-y-8 md:-translate-y-[3.5rem]">
         <div
           className="mx-auto relative w-[192px] h-[192px] rounded-full overflow-hidden md:w-[256px] md:h-[256px]"
           style={{ boxShadow: "0 0 5px dimgray" }}
@@ -98,16 +98,16 @@ const HeroNew: FC = () => {
             </h1>
           </Bobble>
 
-          <p className="mt-4 rounded-[8px] md:mt-8 md:text-3xl">
-            I&apos;m a software engineer specializing in the latest and greatest
-            web technologies.
+          <p className="mt-4 rounded-[8px] md:mt-6 md:text-3xl">
+            A software engineer specializing in the latest and greatest web
+            technologies.
           </p>
 
-          <ul className="flex justify-center items-center mt-4 md:mt-0">
+          <ul className="flex justify-center items-center mt-4 md:mt-6">
             {contacts.map((item) => (
               <motion.div
                 key={item.name}
-                className="mx-1 md:mx-6 md:mt-8"
+                className="mx-1 md:mx-8"
                 whileHover={{ scale: 1.2 }}
               >
                 <a href={item.link} target="_blank" rel="noopener noreferrer">
@@ -143,7 +143,7 @@ const HeroNew: FC = () => {
               duration: 3,
             }}
           >
-            <FaAngleDoubleDown size={48} />
+            <FaAngleDoubleDown className="text-2xl md:text-5xl" />
           </motion.div>
         </motion.div>
       </div>
