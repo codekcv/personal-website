@@ -1,84 +1,113 @@
+"use client";
+
+import ProfilePicture from "@public/images/christian_villamin.jpg";
+import Bobble from "components/Bobble";
+import Chevron from "components/Chevron";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import { FC } from "react";
-import ProfilePicture from "@public/images/christian_villamin.png";
-import { Amatic_SC } from "@next/font/google";
-
 import {
-  SiGithub,
-  SiLinkedin,
-  SiTwitter,
-  SiCodepen,
-  SiYoutube,
-} from "react-icons/si";
+  AiFillLinkedin,
+  AiFillYoutube,
+  AiOutlineCodepen,
+  AiOutlineGithub,
+  AiOutlineTwitter,
+} from "react-icons/ai";
+import { FaDev, FaFreeCodeCamp } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 
-const socialStyles = "text-2xl text-slate-600 cursor-pointer";
-
-const socials = [
+const contacts = [
   {
     name: "GitHub",
-    href: "https://github.com/codekcv",
-    Icon: SiGithub,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/codekcv/",
-    Icon: SiLinkedin,
+    icon: AiOutlineGithub,
+    link: "http://github.com/codekcv",
   },
   {
     name: "Twitter",
-    href: "https://twitter.com/codekcv",
-    Icon: SiTwitter,
+    icon: AiOutlineTwitter,
+    link: "https://twitter.com/codekcv",
   },
   {
-    name: "Codepen",
-    href: "https://codepen.io/codekcv",
-    Icon: SiCodepen,
+    name: "DEV",
+    icon: FaDev,
+    link: "https://dev.to/codekcv",
+  },
+  {
+    name: "CodePen",
+    icon: AiOutlineCodepen,
+    link: "https://codepen.io/codekcv",
+  },
+  {
+    name: "freeCodeCamp",
+    icon: FaFreeCodeCamp,
+    link: "https://www.freecodecamp.org/codekcv",
   },
   {
     name: "YouTube",
-    href: "https://www.youtube.com/channel/UC9NkngOuNAcPGfx4Nl3ODgg/videos",
-    Icon: SiYoutube,
+    icon: AiFillYoutube,
+    link: "https://www.youtube.com/channel/UC9NkngOuNAcPGfx4Nl3ODgg",
+  },
+  {
+    name: "LinkedIn",
+    icon: AiFillLinkedin,
+    link: "https://www.linkedin.com/in/codekcv/",
+  },
+  {
+    name: "Email",
+    icon: IoIosMail,
+    link: "mailto:ChristianVillamin31@gmail.com",
   },
 ];
 
-const amatic_sc = Amatic_SC({
-  weight: "400",
-  subsets: ["latin"],
-});
-
-const Hero: FC = () => {
+export default function Hero() {
   return (
-    <div className="text-center px-6 flex items-center max-w-xl mx-auto">
-      <div className="relative w-40 h-40 rounded-full overflow-hidden bg-gradient-to-r from-slate-500">
-        <Image
-          className="scale-125 object-cover"
-          src={ProfilePicture}
-          alt="Christian Villamin's Photo"
-          fill
-        />
+    <div className="relative h-[calc(100vh-3.5rem)] flex justify-center items-center md:h-[calc(100vh-6rem)]">
+      <div className="-translate-y-8 md:-translate-y-[3.5rem]">
+        <div
+          className="mx-auto relative w-[192px] h-[192px] rounded-full overflow-hidden md:w-[256px] md:h-[256px]"
+          style={{ boxShadow: "0 0 5px dimgray" }}
+        >
+          <Image
+            className="object-cover"
+            src={ProfilePicture}
+            alt="Christian Villamin's Photo"
+            fill
+          />
+        </div>
+
+        <div className="text-center px-4 md:px-8">
+          <Bobble>
+            <h1 className="mt-4 text-4xl text-shadow md:text-8xl md:mt-8">
+              Christian Villamin
+            </h1>
+          </Bobble>
+
+          <p className="mt-4 text-blue-900 opacity-80 rounded-[8px] md:mt-6 md:text-3xl">
+            A software engineer specializing in the latest and greatest web
+            technologies.
+          </p>
+
+          <ul className="flex justify-center items-center mt-4 md:mt-6">
+            {contacts.map((item) => (
+              <motion.div
+                key={item.name}
+                className="mx-1 md:mx-8"
+                whileHover={{
+                  scale: 1.2,
+                  color: "rgb(30 58 138)",
+                }}
+              >
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <item.icon className="text-3xl md:text-5xl" />
+                </a>
+              </motion.div>
+            ))}
+          </ul>
+        </div>
       </div>
 
-      <div className="px-4">
-        <h1 className={`${amatic_sc.className} text-4xl font-bold md:text-4xl`}>
-          Christian Villamin
-        </h1>
-
-        <h3 className="text-slate-500 mt-2">
-          I specialize on modern web technologies. All things fast.
-        </h3>
-
-        <ul className="flex justify-evenly items-center mt-4">
-          {socials.map((social) => (
-            <li key={social.name}>
-              <a href={social.href} target="_blank" rel="noopener noreferrer">
-                <social.Icon className={socialStyles} />
-              </a>
-            </li>
-          ))}
-        </ul>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-8">
+        <Chevron />
       </div>
     </div>
   );
-};
-
-export default Hero;
+}

@@ -1,10 +1,14 @@
+"use client";
+
 import BlogPreview from "components/BlogPreview";
-import SectionTitle from "components/SectionTitle";
+import Bobble from "components/Bobble";
 
 export const Blogs = () => {
   return (
     <section className="mt-6">
-      <SectionTitle>Blogs</SectionTitle>
+      <Bobble>
+        <h1 className="mt-4 text-4xl text-shadow md:text-6xl md:mt-8">BLOGS</h1>
+      </Bobble>
 
       <div className="flex flex-col gap-4">
         <BlogPreview
