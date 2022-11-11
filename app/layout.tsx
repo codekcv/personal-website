@@ -1,6 +1,24 @@
 import "./global.css";
-import Layout from "./(layout)/Layout";
 
+import Footer from "components/Footer";
+import Navbar from "components/Navbar";
+import type { FC } from "react";
+
+type Props = {
+  children: React.ReactNode;
+};
+
+const Layout: FC<Props> = ({ children }) => {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-grow max-w-7xl mx-auto px-4 md:pt-[6rem] md:max-w-7xl md:w-full md:px-16">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
 export default function RootLayout({
   children,
@@ -15,6 +33,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
+
       <body>
         <Layout>{children}</Layout>
       </body>

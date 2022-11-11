@@ -1,9 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import type { FC } from "react";
-import { FaHome, FaAlignLeft, FaCode, FaUserAlt } from "react-icons/fa";
 import { usePathname } from "next/navigation";
+import { FaAlignLeft, FaCode, FaHome, FaUserAlt } from "react-icons/fa";
 
 const menuStyle = "w-full h-16 flex flex-col justify-center items-center";
 
@@ -30,7 +29,7 @@ const menus = [
   },
 ];
 
-const Navbar: FC = () => {
+export default function Navbar() {
   const pathname = usePathname();
 
   const isActiveRoute = (route: string) => {
@@ -38,7 +37,7 @@ const Navbar: FC = () => {
   };
 
   return (
-    <nav className="fixed bottom-0 z-50 h-14 bg-white w-screen flex justify-evenly items-center shadow-inner md:top-0 md:max-w-3xl md:left-1/2 md:-translate-x-1/2 md:shadow-md">
+    <nav className="fixed bottom-0 z-50 h-14 bg-white w-screen grid place-items-center shadow-inner md:top-0 md:max-w-3xl md:left-1/2 md:-translate-x-1/2 md:shadow-md">
       <ul className="flex justify-evenly items-center flex-grow">
         {menus.map((menu) => (
           <li className="w-full pt-2 cursor-pointer" key={menu.name}>
@@ -53,6 +52,4 @@ const Navbar: FC = () => {
       </ul>
     </nav>
   );
-};
-
-export default Navbar;
+}

@@ -1,4 +1,6 @@
-import Title from "components/Title";
+"use client";
+
+import Bobble from "components/Bobble";
 
 const frontend = [
   { title: "React", href: "https://reactjs.org/" },
@@ -46,6 +48,8 @@ const mobile = [
 const development = [
   { title: "Git", href: "https://git-scm.com/" },
   { title: "VS Code", href: "https://code.visualstudio.com/" },
+  { title: "Googling", href: "https://www.google.com/" },
+  { title: "Documentations", href: "https://www.google.com/" },
   { title: "Linux", href: "https://www.linux.org/" },
   { title: "ESLint", href: "https://www.docker.com/" },
   { title: "Prettier", href: "https://www.docker.com/" },
@@ -57,14 +61,8 @@ const development = [
 ];
 
 const devops = [
-  {
-    title: "Containers",
-    href: "",
-  },
-  {
-    title: "Shell Scripting",
-    href: "",
-  },
+  { title: "Containers", href: "" },
+  { title: "Shell Scripting", href: "" },
   { title: "CI/CD", href: "" },
   { title: "Logging", href: "" },
   { title: "Cloud", href: "" },
@@ -119,12 +117,16 @@ const Card = ({ title, technologies }: CardProps) => {
   );
 };
 
-export const Stack = () => {
+export default function Stack() {
   return (
     <section className="mt-32">
-      <Title className="text-6xl">Skills</Title>
+      <Bobble>
+        <h1 className="mt-4 text-4xl text-shadow md:text-6xl md:mt-8">
+          SKILLS
+        </h1>
+      </Bobble>
 
-      <div className="flex flex-wrap justify-evenly gap-y-8 mt-8">
+      <div className="flex flex-wrap justify-evenly gap-y-8 mt-12">
         <Card title="Front-End" technologies={frontend} />
         <Card title="Back-End" technologies={backend} />
         <Card title="Mobile" technologies={mobile} />
@@ -135,6 +137,4 @@ export const Stack = () => {
       </div>
     </section>
   );
-};
-
-export default Stack;
+}
