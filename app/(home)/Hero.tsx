@@ -103,9 +103,8 @@ export default function Hero() {
             ))}
           </ul>
 
-          <p className="mt-8 text-lg font-mono">
-            &#x2f;&#x2f; --- &gt; THIS SITE IS WORK-IN-PROGRESS &lt; ---
-            &#x2f;&#x2f;
+          <p className="mt-8 text-xs font-mono">
+            &#x2f;&#x2f; -- THIS SITE IS WORK-IN-PROGRESS -- &#x2f;&#x2f;
           </p>
         </div>
       </div>

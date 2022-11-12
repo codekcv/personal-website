@@ -1,12 +1,13 @@
 "use client";
 
-import hervn from "@public/images/hervn2.png";
-import hovco from "@public/images/hovco2.png";
-import np from "@public/images/np1.png";
+import hervn from "@public/images/hervn.jpg";
+import hovco from "@public/images/hovco.jpg";
+import np from "@public/images/nextpay.jpg";
 import Bobble from "components/Bobble";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import type { ReactNode } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Props = {
   img: StaticImageData;
@@ -17,34 +18,66 @@ type Props = {
 };
 
 const ProjectCard = ({ img, title, description, stack, children }: Props) => {
+  const imgRef = useRef<HTMLDivElement | null>(null);
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    if (imgRef.current) {
+      setWidth(imgRef.current.offsetWidth);
+      setHeight(imgRef.current.offsetHeight);
+    }
+  }, []);
+
   return (
     <>
-      <div className="relative">
-        {/* <div className="absolute left-0 top-0 opacity-50 -z-10"> */}
-        <div>
-          <Image
-            className=" rounded-xl w-full md:w-96"
-            src={img}
-            alt="NextPay Dashboard"
-          />
+      <div>
+        <div
+          className="relative border-bluee-500"
+          {...(width && { style: { width, height } })}
+        >
+          <div ref={imgRef} {...(width && { style: { position: "absolute" } })}>
+            <Image
+              className="rounded-xl w-full md:w-96"
+              src={img}
+              alt="NextPay Dashboard"
+              priority
+            />
+          </div>
+
+          <p
+            className="absolute top-1/4 -translate-y-1/2 text-center w-full text-3xl font-bold"
+            style={{ textShadow: "4px 4px 0px #fff" }}
+          >
+            {title}
+          </p>
+
+          <p className="absolute bottom-0 text-white bg-gray-600 opacity-40 rounded-b-xl w-full p-2 text-justify text-sm">
+            {description}
+          </p>
         </div>
 
-        <p className="z-10">What: {description}</p>
+        <div className="flex gap-2 mt-4">
+          <h4 className="inline-block">
+            <span className="text-blue-500 font-bold">Stack</span>:{" "}
+          </h4>
 
-        <div className="flex gap-2">
-          <h4 className="inline-block">Stack: </h4>
-
-          <ul className="flex gap-2">
+          <ul className="flex gap-2 flex-wrap">
             {stack.map((tech) => (
-              <li key={tech}>{tech}</li>
+              <li
+                key={tech}
+                className="border-[1px] border-blue-400 rounded-lg text-xs px-2 py-1"
+              >
+                {tech}
+              </li>
             ))}
           </ul>
         </div>
       </div>
 
-      <div>
-        Roles:
-        <p>{children}</p>
+      <div className="mt-4">
+        <span className="text-blue-500 font-bold">Roles:</span>
+        {children}
       </div>
     </>
   );

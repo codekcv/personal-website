@@ -102,11 +102,11 @@ const Card = ({ title, technologies }: CardProps) => {
     <div className="text-center max-w-sm">
       <h2 className="font-bold text-2xl">{title}</h2>
 
-      <ul className="flex flex-wrap justify-evenly gap-x-2 gap-y-4 mt-4">
+      <ul className="flex flex-wrap justify-evenly gap-x-1 gap-y-4 mt-4">
         {technologies.map((tech: { title: string; href: string }) => (
           <li key={tech.title}>
             <a
-              className="border-blue-400 border-[1px] rounded-lg px-2 py-1"
+              className="text-sm border-blue-400 border-[1px] rounded-lg px-2 py-1"
               href={tech.href}
             >
               {tech.title}
