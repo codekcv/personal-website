@@ -3,14 +3,14 @@ import Blogs from "./(home)/Blogs";
 import Experience from "./(home)/Experience";
 import Hero from "./(home)/Hero";
 import Projects from "./(home)/Project";
-import Stack from "./(home)/Stack";
+import Skills from "./(home)/Skills";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <About />
-      <Stack />
+      <Skills />
       <Projects />
       <Experience />
       <Blogs />

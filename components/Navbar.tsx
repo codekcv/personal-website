@@ -37,7 +37,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed bottom-0 z-50 h-14 bg-white w-screen grid place-items-center shadow-inner md:top-0 md:max-w-3xl md:left-1/2 md:-translate-x-1/2 md:shadow-md">
+    <nav className="fixed bottom-0 z-50 h-14 bg-white w-screen flex justify-center items-center shadow-inner md:top-0 md:max-w-3xl md:left-1/2 md:-translate-x-1/2 md:shadow-md">
       <ul className="flex justify-evenly items-center flex-grow">
         {menus.map((menu) => (
           <li className="w-full pt-2 cursor-pointer" key={menu.name}>

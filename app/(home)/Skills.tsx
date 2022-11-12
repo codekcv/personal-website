@@ -101,6 +101,7 @@ const Card = ({ title, technologies }: CardProps) => {
   return (
     <div className="text-center max-w-sm">
       <h2 className="font-bold text-2xl">{title}</h2>
+
       <ul className="flex flex-wrap justify-evenly gap-x-2 gap-y-4 mt-4">
         {technologies.map((tech: { title: string; href: string }) => (
           <li key={tech.title}>
@@ -117,7 +118,7 @@ const Card = ({ title, technologies }: CardProps) => {
   );
 };
 
-export default function Stack() {
+export default function Skills() {
   return (
     <section className="mt-32">
       <Bobble>

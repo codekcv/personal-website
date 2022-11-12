@@ -94,6 +94,7 @@ export default function Experience() {
             company="High Output Ventures"
             href="https://hov.co/"
             points={[
+              "Worked on multiple and different project types.",
               "Performance optimization and memory management.",
               "Interviewing potential frontend candidates.",
               "Responsible for programming sophisticated animations.",

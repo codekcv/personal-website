@@ -102,6 +102,11 @@ export default function Hero() {
               </motion.div>
             ))}
           </ul>
+
+          <p className="mt-8 text-lg font-mono">
+            &#x2f;&#x2f; --- &gt; THIS SITE IS WORK-IN-PROGRESS &lt; ---
+            &#x2f;&#x2f;
+          </p>
         </div>
       </div>
 
