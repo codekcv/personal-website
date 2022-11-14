@@ -39,10 +39,10 @@ const ProjectCard = ({
   }, []);
 
   return (
-    <>
+    <div {...(width && { style: { width } })}>
       <div>
         <div
-          className="relative border-bluee-500"
+          className="relative border-blue-500"
           {...(width && { style: { width, height } })}
         >
           <div ref={imgRef} {...(width && { style: { position: "absolute" } })}>
@@ -68,6 +68,8 @@ const ProjectCard = ({
           </p>
         </div>
 
+        <div className="mt-2">{children}</div>
+
         <div className="flex gap-2 mt-4">
           <h4 className="inline-block">
             <span className="text-blue-500 font-bold">Stack</span>:{" "}
@@ -85,12 +87,7 @@ const ProjectCard = ({
           </ul>
         </div>
       </div>
-
-      <div className="mt-4">
-        <span className="text-blue-500 font-bold">Roles:</span>
-        {children}
-      </div>
-    </>
+    </div>
   );
 };
 
@@ -106,118 +103,71 @@ export default function Project() {
       <div className="mt-8">
         <h2 className="font-bold text-xl">Company Projects</h2>
 
-        <div>
-          <h3 className="mt-4">
-            <span className="text-gray-400 text-xs">Under </span> NextPay
-          </h3>
+        <div className="flex flex-wrap gap-8 justify-evenly items-center mt-4 md:mt-8">
+          <ProjectCard
+            img={np}
+            title="NextPay"
+            description="A next-generation all in one banking application that empowers businesses with functions like invoice sending, payment collections, payroll and more."
+            href="https://nextpay.world/"
+            stack={[
+              "React",
+              "Node.js",
+              "TypeScript",
+              "Redux",
+              "Apollo Client",
+              "Strapi",
+              "Material UI",
+              "Formik",
+            ]}
+          >
+            <p>
+              Responsible for the disbursement processes. Automation, batching,
+              CSV imports. Worked with customers and suppliers directories.
+            </p>
+          </ProjectCard>
 
-          <div>
-            <ProjectCard
-              img={np}
-              title="NextPay"
-              description="A next-generation all in one banking application that empowers businesses with functions like invoice sending, payment collections, payroll and more."
-              href="https://nextpay.world/"
-              stack={[
-                "React",
-                "Node.js",
-                "TypeScript",
-                "Redux",
-                "Apollo Client",
-                "Strapi",
-                "Material UI",
-                "Formik",
-              ]}
-            >
-              <p>
-                Responsible for the disbursement processes. Automation,
-                batching, CSV imports. Worked with customers and suppliers
-                directories.
-              </p>
-            </ProjectCard>
-          </div>
-        </div>
+          <ProjectCard
+            img={hervn}
+            title="her.vn"
+            description="A news and blog website for better living for Vietnamese women."
+            href="https://her.vn/"
+            stack={[
+              "TypeScript",
+              "Next.js",
+              "Zustand",
+              "SWR",
+              "React Hook Form",
+            ]}
+          >
+            <p>
+              Singlehandedly developed a news and blogging site for a Vietnamese
+              client. Worked closely with designers and stakeholders.
+            </p>
+          </ProjectCard>
 
-        <div>
-          <h3>
-            <span className="text-gray-400 text-sm">Under </span>High Output
-            Ventures
-          </h3>
-
-          <div>
-            <h4>her.vn</h4>
-
-            <ProjectCard
-              img={hervn}
-              title="her.vn"
-              description="A news and blog website for better living for Vietnamese women."
-              href="https://her.vn/"
-              stack={[
-                "TypeScript",
-                "NextJS",
-                "Zustand",
-                "SWR",
-                "React Hook Form",
-              ]}
-            >
-              <p>
-                Singlehandedly developed the entire application to production
-                before passing the project to the Vietnamese team for them to
-                maintain.
-              </p>
-
-              <p>
-                Worked closely with designers to ensure their vision is living
-                pixel perfect.
-              </p>
-            </ProjectCard>
-          </div>
-
-          <div>
-            <h4>hov.co</h4>
-
-            <ProjectCard
-              img={hovco}
-              title="hov.co"
-              description="The company's main website that is beautifully designed and rich in unique animations."
-              href="https://www.hov.co/"
-              stack={[
-                "TypeScript",
-                "NextJS",
-                "Framer Motion",
-                "Redux",
-                "React Hook Form",
-              ]}
-            >
-              <p>
-                Responsible for coding the landing page&apos;s grid based
-                animation.
-              </p>
-            </ProjectCard>
-          </div>
-
-          <div>
-            <h4>OneWallet</h4>
-
-            {/* <ProjectCard
-              img={codekcv}
-              title=""
-              description="My first personal site that has a unique take on presentation and rich with native animations."
-              stack={[
-                "TypeScript",
-                "React",
-                "Gatsby",
-                "CSS Animations",
-                "styled-components",
-              ]}
-            >
-              <p>LALALA</p>
-            </ProjectCard> */}
-          </div>
+          <ProjectCard
+            img={hovco}
+            title="hov.co"
+            description="The company's main website that is beautifully designed and rich in unique animations."
+            href="https://www.hov.co/"
+            stack={[
+              "TypeScript",
+              "Next.js",
+              "Framer Motion",
+              "Redux",
+              "React Hook Form",
+            ]}
+          >
+            <p>
+              Responsible for developing an exquisite grid-based animations that
+              is mobile and desktop responsive.
+            </p>
+          </ProjectCard>
         </div>
       </div>
 
-      <div>
-        <h2 className="font-bold text-xl">Personal Projects</h2>
+      <div className="mt-8">
+        <h2 className="font-bold text-xl mb-4">Personal Projects</h2>
 
         <ProjectCard
           img={codekcv}
@@ -236,7 +186,7 @@ export default function Project() {
         </ProjectCard>
       </div>
 
-      <h2 className="font-bold text-xl">Mini Projects</h2>
+      {/* <h2 className="font-bold text-xl">Mini Projects</h2> */}
     </section>
   );
 }

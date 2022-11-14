@@ -112,7 +112,7 @@ export default function Hero() {
 
         <div className="text-center mt-8">
           <a
-            href="https://drive.google.com/file/d/1-kkRXpIE2VcZ3RYI6kSXOqJ5bmWxV7Bc/view?usp=sharing"
+            href="https://drive.google.com/file/d/10HJ3TqH4BzPvPJjD_sAfXR_UCkpWhH_V/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >

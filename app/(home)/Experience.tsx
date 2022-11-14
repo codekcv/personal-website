@@ -62,12 +62,12 @@ export default function Experience() {
   return (
     <>
       <Bobble>
-        <h1 className="text-center mt-4 text-4xl text-shadow md:text-6xl md:mt-8">
+        <h1 className="text-center mt-8 text-4xl text-shadow md:text-6xl">
           EXPERIENCE
         </h1>
       </Bobble>
 
-      <div className="mt-8 grid place-items-center">
+      <div className="grid place-items-center">
         <div>
           <ExperienceCard
             date="Aug 2021 - Aug 2022"
