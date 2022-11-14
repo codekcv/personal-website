@@ -15,10 +15,18 @@ type Props = {
   title: string;
   description: string;
   stack: Array<string>;
+  href: string;
   children: ReactNode;
 };
 
-const ProjectCard = ({ img, title, description, stack, children }: Props) => {
+const ProjectCard = ({
+  img,
+  title,
+  description,
+  stack,
+  href,
+  children,
+}: Props) => {
   const imgRef = useRef<HTMLDivElement | null>(null);
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
@@ -38,12 +46,14 @@ const ProjectCard = ({ img, title, description, stack, children }: Props) => {
           {...(width && { style: { width, height } })}
         >
           <div ref={imgRef} {...(width && { style: { position: "absolute" } })}>
-            <Image
-              className="rounded-xl w-full md:w-96"
-              src={img}
-              alt="NextPay Dashboard"
-              priority
-            />
+            <a href={href} target="_blank" rel="noopener noreferrer">
+              <Image
+                className="rounded-xl w-full md:w-96"
+                src={img}
+                alt="NextPay Dashboard"
+                priority
+              />
+            </a>
           </div>
 
           <p
@@ -106,6 +116,7 @@ export default function Project() {
               img={np}
               title="NextPay"
               description="A next-generation all in one banking application that empowers businesses with functions like invoice sending, payment collections, payroll and more."
+              href="https://nextpay.world/"
               stack={[
                 "React",
                 "Node.js",
@@ -139,6 +150,7 @@ export default function Project() {
               img={hervn}
               title="her.vn"
               description="A news and blog website for better living for Vietnamese women."
+              href="https://her.vn/"
               stack={[
                 "TypeScript",
                 "NextJS",
@@ -167,6 +179,7 @@ export default function Project() {
               img={hovco}
               title="hov.co"
               description="The company's main website that is beautifully designed and rich in unique animations."
+              href="https://www.hov.co/"
               stack={[
                 "TypeScript",
                 "NextJS",
@@ -210,6 +223,7 @@ export default function Project() {
           img={codekcv}
           title=""
           description="My first personal site that has a unique take on presentation and rich with native animations."
+          href="https://codekcv.github.io/"
           stack={[
             "TypeScript",
             "React",
