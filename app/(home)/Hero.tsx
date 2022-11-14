@@ -106,6 +106,8 @@ export default function Hero() {
           <p className="mt-8 text-xs font-mono">
             &#x2f;&#x2f; -- THIS SITE IS WORK-IN-PROGRESS -- &#x2f;&#x2f;
           </p>
+
+          <p className="text-xs font-mono">(In the middle of migration)</p>
         </div>
       </div>
 

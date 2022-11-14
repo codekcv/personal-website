@@ -8,6 +8,7 @@ export const Blogs = () => {
     <section className="mt-6">
       <Bobble>
         <h1 className="mt-4 text-4xl text-shadow md:text-6xl md:mt-8">BLOGS</h1>
+        <p className="text-center font-mono text-xs">(Not yet connected)</p>
       </Bobble>
 
       <div className="flex flex-col gap-4">
@@ -18,17 +19,17 @@ export const Blogs = () => {
         />
 
         <BlogPreview
-          title="Why I prefer office based. Remote vs office."
-          description="Remote is nice, but office based is still more productive. I've
+          title="Why I prefer office based. Remote vs Office."
+          description="Remote is cozy but office based is still more productive. I've
         been on a remote based work since the start of my career back in 2019
         December. Now, I ha"
-          date="2022-10-23"
+          date="2022-06-12"
         />
 
         <BlogPreview
-          title="Random blog static entry placeholder here."
+          title="What does it take to be a technical lead?"
           description="I'm just going to add a dummy text here, I could've used the Lorem Ipsum generator but I think it's time for something else."
-          date="2022-10-22"
+          date="2022-10-24"
         />
 
         <h4 className="text-center text-xl mt-2">See More...</h4>

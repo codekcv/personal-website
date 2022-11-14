@@ -23,19 +23,19 @@ export default function About() {
 
             <p className="text-sm">
               Hi, I&apos;m Christian Villamin, a software engineer specializing
-              in JavaScript, React, and Node. I enjoy analyzing codebases,
-              optimizing. Making things efficient, code and work process.
-              Recently, I&apos;ve been also into leadership.
+              in JavaScript, React, and Node. I enjoy analyzing codebases.
+              I&apos; have an obsession with optimizing not just to make things
+              efficient but also easier to maintain, albeit codewise or
+              workflow. Recently, ...
             </p>
 
             <p className="text-sm mt-4">
-              I&apos;ve started programming when I was 10.
+              I have worked with a small company and a start-up YC company. ...
+              details ...
             </p>
           </div>
 
           <div>
-            <span className={spanStyles}>Thingies</span>
-
             <p className="text-lg">
               Core Team @{" "}
               <a
@@ -59,6 +59,16 @@ export default function About() {
                 ReactJS PH Group
               </a>
             </p>
+          </div>
+
+          <div>
+            <span className={spanStyles}>Random Thingies</span>
+            <ul>
+              <li>I love fantasy and mystery books.</li>
+              <li>I play classical piano and guitar.</li>
+              <li>I like walking to arrange my thoughts.</li>
+              <li>I enjoy puzzles and brainteasers.</li>
+            </ul>
           </div>
         </div>
       </div>
