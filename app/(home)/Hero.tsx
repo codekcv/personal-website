@@ -109,6 +109,14 @@ export default function Hero() {
 
           <p className="text-xs font-mono">(In the middle of migration)</p>
         </div>
+
+        <div className="text-center mt-8">
+          <a href="https://drive.google.com/file/d/1-kkRXpIE2VcZ3RYI6kSXOqJ5bmWxV7Bc/view?usp=sharing">
+            <button className="rounded-lg leading-none px-2 pb-2 pt-1 border-[2px] border-blue-500">
+              Resume
+            </button>
+          </a>
+        </div>
       </div>
 
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-8">

@@ -1,5 +1,6 @@
 "use client";
 
+import codekcv from "@public/images/codekcv.jpg";
 import hervn from "@public/images/hervn.jpg";
 import hovco from "@public/images/hovco.jpg";
 import np from "@public/images/nextpay.jpg";
@@ -52,7 +53,7 @@ const ProjectCard = ({ img, title, description, stack, children }: Props) => {
             {title}
           </p>
 
-          <p className="absolute bottom-0 text-white bg-gray-600 opacity-40 rounded-b-xl w-full p-2 text-justify text-sm">
+          <p className="absolute bottom-0 text-white bg-gray-800 opacity-75 rounded-b-xl w-full p-2 text-justify text-sm">
             {description}
           </p>
         </div>
@@ -184,25 +185,42 @@ export default function Project() {
           <div>
             <h4>OneWallet</h4>
 
-            <ProjectCard
-              img={hovco}
-              title="hov.co"
-              description="A real time betting admin dashboard."
+            {/* <ProjectCard
+              img={codekcv}
+              title=""
+              description="My first personal site that has a unique take on presentation and rich with native animations."
               stack={[
                 "TypeScript",
-                "ReactJS",
-                "Apollo Client",
-                "Redux",
-                "Formik",
+                "React",
+                "Gatsby",
+                "CSS Animations",
+                "styled-components",
               ]}
             >
               <p>LALALA</p>
-            </ProjectCard>
+            </ProjectCard> */}
           </div>
         </div>
       </div>
 
-      <h2 className="font-bold text-xl">Personal Projects</h2>
+      <div>
+        <h2 className="font-bold text-xl">Personal Projects</h2>
+
+        <ProjectCard
+          img={codekcv}
+          title=""
+          description="My first personal site that has a unique take on presentation and rich with native animations."
+          stack={[
+            "TypeScript",
+            "React",
+            "Gatsby",
+            "CSS Animations",
+            "styled-components",
+          ]}
+        >
+          {" "}
+        </ProjectCard>
+      </div>
 
       <h2 className="font-bold text-xl">Mini Projects</h2>
     </section>
