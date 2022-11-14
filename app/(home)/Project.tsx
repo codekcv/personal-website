@@ -8,7 +8,6 @@ import Bobble from "components/Bobble";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { useEffect, useRef, useState } from "react";
 
 type Props = {
   img: StaticImageData;
@@ -27,25 +26,11 @@ const ProjectCard = ({
   href,
   children,
 }: Props) => {
-  const imgRef = useRef<HTMLDivElement | null>(null);
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
-
-  useEffect(() => {
-    if (imgRef.current) {
-      setWidth(imgRef.current.offsetWidth);
-      setHeight(imgRef.current.offsetHeight);
-    }
-  }, []);
-
   return (
-    <div {...(width && { style: { width } })}>
+    <div className="max-w-full md:max-w-[384px]">
       <div>
-        <div
-          className="relative border-blue-500"
-          {...(width && { style: { width, height } })}
-        >
-          <div ref={imgRef} {...(width && { style: { position: "absolute" } })}>
+        <div className="relative">
+          <div>
             <a href={href} target="_blank" rel="noopener noreferrer">
               <Image
                 className="rounded-xl w-full md:w-96"
@@ -67,25 +52,25 @@ const ProjectCard = ({
             {description}
           </p>
         </div>
+      </div>
 
-        <div className="mt-2">{children}</div>
+      <div className="mt-2">{children}</div>
 
-        <div className="flex gap-2 mt-4">
-          <h4 className="inline-block">
-            <span className="text-blue-500 font-bold">Stack</span>:{" "}
-          </h4>
+      <div className="flex gap-2 mt-4">
+        <h4 className="inline-block">
+          <span className="text-blue-500 font-bold">Stack</span>:{" "}
+        </h4>
 
-          <ul className="flex gap-2 flex-wrap">
-            {stack.map((tech) => (
-              <li
-                key={tech}
-                className="border-[1px] border-blue-400 rounded-lg text-xs px-2 py-1"
-              >
-                {tech}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="flex gap-2 flex-wrap">
+          {stack.map((tech) => (
+            <li
+              key={tech}
+              className="border-[1px] border-blue-400 rounded-lg text-xs px-2 py-1"
+            >
+              {tech}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
