@@ -4,6 +4,7 @@ import Experience from "./(home)/Experience";
 import Hero from "./(home)/Hero";
 import Projects from "./(home)/Project";
 import Skills from "./(home)/Skills";
+import Talks from "./(home)/Talks";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Projects />
       <Experience />
       <Blogs />
+      <Talks />
     </>
   );
 }

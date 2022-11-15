@@ -1,8 +1,10 @@
 "use client";
 
 import codekcv from "@public/images/codekcv.jpg";
+import headlesscommerce from "@public/images/headlesscommerce.jpg";
 import hervn from "@public/images/hervn.jpg";
 import hovco from "@public/images/hovco.jpg";
+import lister from "@public/images/lister.jpg";
 import np from "@public/images/nextpay.jpg";
 import Bobble from "components/Bobble";
 import type { StaticImageData } from "next/image";
@@ -151,8 +153,27 @@ export default function Project() {
         </div>
       </div>
 
-      <div className="mt-8">
-        <h2 className="font-bold text-xl mb-4">Personal Projects</h2>
+      <h2 className="font-bold text-xl my-4">Personal Projects</h2>
+
+      <div className="flex flex-wrap gap-8 justify-evenly items-center mt-4 md:mt-8">
+        <ProjectCard
+          img={headlesscommerce}
+          title=""
+          description="A pluggable headless E-commerce focused CMS solution for storefront websites that you can install as a package to give you a backend client that can live inside a protected route in your front-end for the merchant to access and manage their commerce content and view analysis."
+          href="https://github.com/codekcv/headless-commerce"
+          stack={[
+            "TypeScript",
+            "Next.js",
+            "Apollo Client/Server",
+            "Ant Design",
+            "Redux",
+            "PostgreSQL",
+            "Prisma",
+            "React Hook Form",
+          ]}
+        >
+          {" "}
+        </ProjectCard>
 
         <ProjectCard
           img={codekcv}
@@ -166,6 +187,16 @@ export default function Project() {
             "CSS Animations",
             "styled-components",
           ]}
+        >
+          {" "}
+        </ProjectCard>
+
+        <ProjectCard
+          img={lister}
+          title=""
+          description="A Trello clone with next level nested dragging capabilities."
+          href="https://listernote.netlify.app/"
+          stack={["TypeScript", "React", "Beautiful DND", "styled-components"]}
         >
           {" "}
         </ProjectCard>

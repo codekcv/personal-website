@@ -81,7 +81,7 @@ export default function Hero() {
             </h1>
           </Bobble>
 
-          <p className="mt-4 text-blue-900 opacity-80 rounded-[8px] md:mt-6 md:text-3xl">
+          <p className="mt-4 rounded-[8px] text-base md:mt-6 md:text-2xl">
             A software engineer specializing in the latest and greatest web
             technologies.
           </p>
